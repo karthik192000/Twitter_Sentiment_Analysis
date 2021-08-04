@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel=icon href="/Media/icon.png" sizes="16x16" type="image/png">
+    <title>Twitter Sentiment Analysis</title>
+</head>
+<body style="background-color:rgba(0, 239, 247, 0.521);">
+    <form id = "home"action='http://192.168.10.9:8000'>
+        <input type="submit" value="Home" />
+    </form>
+    <center>
+    <img src = "/Media/logo.jfif"/>
+    <h1>Twitter Sentiment Analysis</h1><br><br>
+    </from>
+    <form action = 'sentiment/'>
+        <label>Search Word:</label>
+        <input type="text" name="input_text"class="form-group"   id="abc"placeholder="Search Word">
+        <label>Date Since:</label>
+        <input type="date" name="date"class="form-group"   id="abc"placeholder="yyyy-mm-dd" min = "1997-01-01" max = "2030-12-31">
+        <input type="submit" value="Submit">
+    </form>
+    <br><br>
+    {% if search_word %}
+    <h2>Search Word : {{search_word}}</h2>
+    <h2>Date Since : {{date_since}}</h2>
+    <h2>Positive Tweets: {{Positive}}</h2>
+    <h2>Neutral Tweets: {{Neutral}}</h2>
+    <h2>Negative tweets: {{Negative}}</h2>
+    <h2>Sample tweet: {{Sample_Tweet}}</h2>
+    {% else %}
+    <h2>Maximum 100 tweets can be streamed at a time</h2>
+    {% endif %}
+    </center>
+</body>
+</html>

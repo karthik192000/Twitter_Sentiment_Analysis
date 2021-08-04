@@ -1,0 +1,13 @@
+-A Twitter sentiment analysis based web application developed using Python's wep framework Django
+-The web application takes 2 inputs the twitter username of the person whose tweets are to be analysed and the date since when the tweets are to streamed 
+-Maximum 100 tweets can be streamed at a time 
+-The web application will display the total count of Positive/Neutral/Negative tweets that belong to the user
+
+Packages/Frameworks/libraries used:
+-Tweepy ( to access twitter API)
+-TextBlob ( python based NLP library for sentiment analysis)
+-Django ( Python's web framework)
+
+
+Prerequisites:
+To be able to access the twitter API using tweepy user needs to have twitter developer account.
